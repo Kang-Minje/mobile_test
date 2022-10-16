@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../srcs/fonts/NotoSansKR-Bold.otf') format('truetype');
+  }
+
+  @font-face {
+      font-family: 'Noto Sans';
+      src: url('../srcs/fonts/NotoSansDisplay-SemiBold.ttf') format('truetype');
+  }
+
+/* 노말라이즈 */
+body, ul, li {
+    padding:0;
+    margin:0;
+    list-style:none;
+    display: inline;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+/* 노말라이즈 끝 */
+
+/* 라이브러리 */
+/* 상단바 */
+.mobile-top-bar {
+    background-color:#f1f;
+    position:fixed;
+    left:0;
+    width:100%;
+    z-index:1;
+}
+.mobile-top-bar > .logo {
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size:1.5rem;
+}
+
+/* 토글 사이드바 버튼 아이콘 */
+.ico {
+    position:absolute;
+    top:20px;
+    left:20px;
+    height: 180px;
+    cursor:pointer;
+}
+
+}
+/* 라이브러리 끝 */
+
+/* 커스텀 */
+/* 좌측 사이드 바 */
+/* 좌측 사이드바 배경 */
+.left-side-bar-box {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0);
+    visibility:hidden;
+    transition:visibility .5s, background-color .5s;
+}
+.left-side-bar-box.active {
+    background-color:rgba(0,0,0,0);
+    visibility:visible;
+}
+
+/* 좌측 사이드바 */
+.left-side-bar {
+    position:fixed;
+    top:130px;
+    left:-250px;
+    width:250px;
+    height:100%;
+    background-color:#fff;
+    padding-top:40px;
+    transition:left .5s;
+}
+.left-side-bar-box.active > .left-side-bar {
+    left:40px;
+}
+.left-side-bar > .menu-1 ul > li > a {
+    display:block;
+    padding:5px;
+}
+.left-side-bar > .menu-1 ul > li:hover > a {
+    background-color:rgb(16,249,1);
+    text-decoration: underline;
+}
+
+/* 혼자가 아닌 a 에 +를 붙혀준다 */
+/* .left-side-bar > .menu-1 ul > li > a:not(:only-child)::after {
+    content:"+";
+    float:right;
+} */
+/* 엑티브가 있는 메뉴(펼쳐진 메뉴)에 a에 - 를 붙혀준다 */
+/* .left-side-bar > .menu-1 ul > li.active > a:not(:only-child)::after {
+    content:"-";
+} */
+.left-side-bar > .menu-1 > ul ul {
+    display:none;
+    background-color:#fff;
+    padding-left: 30px;
+}
+.left-side-bar > .menu-1 > ul ul ul {
+    background-color:#fff;
+    padding-left: 30px;
+}
+.left-side-bar > .menu-1 ul > li.active > ul {
+    display:block;
+}
+
+li > a {
+  font-family: "Noto Sans KR";
+  font-size: 15px;
+}
+
+#menu_td{
+  padding-top: 200px;
+}
